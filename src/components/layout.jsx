@@ -5,10 +5,10 @@ import Footer from './footer';
 
 export default function Mainlayout() {
   return (
-    <>
+    <main className='bg-blue-500'>
       <Navbar />
       <Outlet />
       <Footer />
-    </>
+    </main>
   )
 }

@@ -8,9 +8,7 @@ function App() {
   return (
     <>
       <main>
-        <section className="">
           <HomePage />
-        </section>
       </main>
     </>
   );
