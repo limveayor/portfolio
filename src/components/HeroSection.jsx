@@ -4,13 +4,13 @@ import myImage from "../assets/images/picture.JPG";
 export default function HeroSection() {
   return (
     <main>
-      <section className="h-screen flex flex-col justify-center items-center bg-gradient-to-br from-blue-500 to-purple-600 text-white">
+      <section className=" max-w-8xl mx-auto h-screen flex flex-col justify-center items-center text-white">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left animate-fadeIn">
             <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-yellow-500">
               Hi, I'm <span className="text-blue-700">Lim Veayor</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-600 mb-6 font-light">
+            <p className="text-lg md:text-xl text-white mb-6 font-light">
               Full Stack Developer | Quality Assurance
             </p>
             <a

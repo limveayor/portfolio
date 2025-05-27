@@ -3,7 +3,7 @@ import React from "react";
 export default function ProjectSection() {
   return (
     <main>
-      <section id="projects" className="max-w-5xl mx-auto py-16 px-4 ">
+      <section id="projects" className="h-screen py-16 px-4 bg-gradient-to-br from-blue-500 to-purple-600 ">
         <h2 className="text-4xl font-bold text-center mb-8 text-blue-600 mt-5">
           Projects
         </h2>

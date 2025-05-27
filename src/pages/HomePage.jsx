@@ -7,7 +7,7 @@ import ContactSection from "../components/ContactSection";
 
 function App() {
   return (
-    <main className="min-h-screen bg-blue-500 font-sans px-4 md:px-6 ">
+    <main className="min-h-screen bg-slate-900 font-sans px-4 md:px-6 ">
       {/* Hero Section */}
       <HeroSection />
       {/* About Section */}

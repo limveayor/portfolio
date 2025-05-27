@@ -1,19 +1,31 @@
 import React from "react";
+import myImage1 from "../assets/images/picture1.JPG";
 
 export default function AboutSection() {
   return (
-    <main>
-      <section className="py-16 bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
-          <p className="text-gray-700">
-            I am a professional full stack developer with experience building
-            high-quality websites and applications. Skilled in React.js for
-            frontend development and Java Spring Boot for backend services. I
-            love creating efficient, scalable, and user-friendly web
-            experiences.
-          </p>
-        </div>
+    <main className="h-screen flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 text-white gap-5">
+      <section className="flex justify-center">
+        <img
+          src={myImage1}
+          alt="Lim Veayor"
+          className="rounded-full w-96 h-96 md:w-80 md:h-80 object-cover shadow-xl transform hover:scale-105 transition-all"
+        />
+      </section>
+      <section className="max-w-4xl px-6 text-center">
+        <h2 className="text-4xl font-extrabold mb-6">About Me</h2>
+        <p className="text-lg leading-relaxed text-white/90">
+          Hi! I'm a passionate and results-driven{" "}
+          <strong>Full Stack Developer</strong> with a deep interest in crafting
+          powerful, responsive, and scalable web applications. I specialize in
+          building modern frontends using <strong>React.js</strong> and robust
+          backends with <strong>Spring Boot</strong>.
+        </p>
+        <p className="mt-4 text-lg leading-relaxed text-white/90">
+          I enjoy transforming complex problems into elegant, efficient
+          solutions. With a keen eye for design and performance, I deliver
+          projects that not only work flawlessly but also delight users. Let's
+          build something amazing together!
+        </p>
       </section>
     </main>
   );
