@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <div>
       {/* Navbar */}
-      <nav className="flex justify-between items-center p-6 shadow-md bg-slate-900 text-white">
+      <nav className=" max-w-8xl mx-auto flex justify-between items-center p-6 shadow-md bg-slate-900 text-white">
         <div className="text-2xl font-bold">Lim Veayor</div>
         <ul className="flex space-x-6">
           <li>
