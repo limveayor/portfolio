@@ -14,9 +14,14 @@ const routing = createBrowserRouter([{
     {
       path: '/',
       element: <App />,
-    }
-  ]
-}])
+    },
+  ],
+},
+],
+  {
+    basename: '/portfolio', // <-- This is what you need
+  }
+)
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <App /> */}
