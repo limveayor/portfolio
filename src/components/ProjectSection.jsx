@@ -5,21 +5,21 @@ const projects = [
     title: "Jalat",
     description:
       "A web application built with React and Spring Boot for managing tasks and projects, featuring authentication, RESTful APIs, and responsive design.",
-    tech: ["React", "Spring Boot", "JWT", "REST API"],
-    link: "#", // Replace with actual URL if available
+    tech: ["Next", "Spring Boot", "JWT", "REST API"],
+    link: "https://www.figma.com/proto/SBKMqWNzkzhpvEMe8yBu2n/%E1%9E%85%E1%9E%9B%E1%9F%90%E1%9E%8F?node-id=3514-22625&t=y9iKV2wmjpCtYITc-1&scaling=scale-down-width&content-scaling=fixed&page-id=1%3A2&starting-point-node-id=3514%3A22625", // Replace with actual URL if available
   },
   {
     title: "Movie Store",
     description:
       "An eCommerce platform with a Java backend and React frontend, featuring product browsing, shopping cart, and secure payment integration.",
-    tech: ["Java", "Spring MVC", "React", "MySQL"],
+    tech: ["React", "Tailwind CSS"],
     link: "#",
   },
   {
     title: "Portal Testing API",
     description:
       "An API testing tool with real-time chat and analytics features, developed using WebSocket, React, and Tailwind CSS.",
-    tech: ["WebSocket", "React", "Tailwind CSS", "Karate"],
+    tech: ["Java Spring Boot", "Bootstrap", "Karate"],
     link: "#",
   },
 ];
@@ -39,12 +39,12 @@ export default function ProjectSection() {
           {projects.map(({ title, description, tech, link }, index) => (
             <div
               key={index}
-              className="p-6 bg-white text-black border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:scale-105"
+              className="p-6 text-black border border-gray-200 rounded-xl shadow-md hover:shadow-xl transition-all transform hover:scale-105"
             >
-              <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+              <h3 className="text-2xl font-semibold text-white mb-3">
                 {title}
               </h3>
-              <p className="text-gray-600 mb-4">{description}</p>
+              <p className="text-white mb-4">{description}</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {tech.map((item, i) => (
                   <span
@@ -59,7 +59,7 @@ export default function ProjectSection() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition"
+                className="inline-block mt-2 text-sm font-semibold text-white hover:text-blue-800 transition"
               >
                 View Project →
               </a>
