@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import myImage from "../assets/images/picture.JPG"; // Your image path
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; // Font Awesome React Icons
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { FaReact, FaJava, FaTools } from "react-icons/fa";
 import { SiSpringboot, SiApachejmeter } from "react-icons/si";
 
@@ -52,7 +52,6 @@ export default function HeroSection() {
               </span>
             </p>
 
-            {/* Professional Summary */}
             <p className="text-sm sm:text-base md:text-lg text-gray-300 mb-6">
               I'm a results-driven developer with a strong foundation in both
               frontend and backend technologies. I specialize in building
@@ -61,12 +60,17 @@ export default function HeroSection() {
               high-quality code and ensuring excellent user experience.
             </p>
 
-            {/* Tech Icons */}
-            <div className="flex justify-center md:justify-start gap-4 mb-6 text-2xl text-blue-300">
-              <FaReact title="React.js" />
-              <SiSpringboot title="Spring Boot" />
-              <FaTools title="Karate" />
-              <SiApachejmeter title="JMeter" />
+            {/* Sliding Tech Icons */}
+            <div className="relative w-full overflow-hidden h-12 mb-8">
+              <div className="absolute flex whitespace-nowrap animate-slide-left gap-6 text-2xl text-blue-300">
+                {[...Array(2)].flatMap((_, i) => [
+                  <FaReact key={`react-${i}`} title="React.js" />,
+                  <SiSpringboot key={`spring-${i}`} title="Spring Boot" />,
+                  <FaTools key={`karate-${i}`} title="Karate" />,
+                  <SiApachejmeter key={`jmeter-${i}`} title="JMeter" />,
+                  <FaJava key={`java-${i}`} title="Java" />,
+                ])}
+              </div>
             </div>
 
             {/* Download CV Button */}
@@ -81,7 +85,7 @@ export default function HeroSection() {
             {/* Social Links */}
             <div className="mt-6 flex justify-center md:justify-start gap-6 text-2xl">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/limveayor"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-400"
@@ -90,7 +94,7 @@ export default function HeroSection() {
                 <FaGithub />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/lim-veayor-346a97245/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-blue-400"

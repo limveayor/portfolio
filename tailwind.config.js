@@ -27,6 +27,15 @@ module.exports = {
         "fade-in-up": "fade-in-up 1s ease-out forwards",
         "zoom-in": "zoom-in 1s ease-out forwards",
       },
+            keyframes: {
+        'slide-left': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        'slide-left': 'slide-left 20s linear infinite',
+      },
     },
   },
   plugins: [],
