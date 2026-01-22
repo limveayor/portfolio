@@ -129,7 +129,7 @@ const experiences = [
 
 export default function AboutSection() {
   return (
-    <main className="relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-20 overflow-hidden">
+    <main className="relative min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 text-white px-3 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 py-16 sm:py-20 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -137,18 +137,18 @@ export default function AboutSection() {
       
       <section id="about" className="relative z-10 max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-16 sm:mb-20">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
                 Professional Experience
               </span>
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto px-2">
               My journey in software development and quality assurance
             </p>
           </motion.div>
@@ -160,7 +160,7 @@ export default function AboutSection() {
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 transform md:-translate-x-1/2 hidden md:block"></div>
 
           {/* Experience Cards */}
-          <div className="space-y-12 md:space-y-16">
+          <div className="space-y-8 sm:space-y-12 md:space-y-16">
             {experiences.map((exp, index) => {
               const IconComponent = exp.icon;
               return (
@@ -184,7 +184,7 @@ export default function AboutSection() {
                       {/* Gradient overlay */}
                       <div className={`absolute inset-0 bg-gradient-to-br ${exp.iconColor} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
-                      <div className="relative p-8 space-y-6">
+                      <div className="relative p-6 sm:p-8 space-y-6">
                         {/* Header */}
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex items-start gap-4 flex-1">

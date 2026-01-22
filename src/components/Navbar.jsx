@@ -53,15 +53,15 @@ export default function Navbar() {
           : "bg-slate-900/80 backdrop-blur-sm"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           <a
             href="#"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent hover:from-blue-300 hover:to-cyan-300 transition-all"
+            className="text-lg sm:text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent hover:from-blue-300 hover:to-cyan-300 transition-all"
           >
             Lim Veayor
           </a>
@@ -71,7 +71,7 @@ export default function Navbar() {
                 <a
                   href={item.href}
                   onClick={(e) => handleClick(e, item.id)}
-                  className={`relative px-3 py-2 text-sm sm:text-base md:text-lg font-medium transition-all duration-300 ${
+                  className={`relative px-2 sm:px-3 py-2 text-xs sm:text-sm md:text-base lg:text-lg font-medium transition-all duration-300 ${
                     activeSection === item.id
                       ? "text-blue-400"
                       : "text-gray-300 hover:text-blue-400"

@@ -126,7 +126,7 @@ export default function ProjectSection() {
 
   return (
     <main>
-      <section id="projects" className="relative min-h-screen py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 overflow-hidden">
+      <section id="projects" className="relative min-h-screen py-16 sm:py-20 px-3 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900 overflow-hidden">
         {/* Enhanced Background decorations */}
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -135,12 +135,12 @@ export default function ProjectSection() {
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
-            className="text-center mb-20"
+            className="text-center mb-12 sm:mb-20"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
                 Featured Projects
               </span>
@@ -198,7 +198,7 @@ export default function ProjectSection() {
               </svg>
 
               {/* Projects as Tree Nodes */}
-              <div className="space-y-12 lg:space-y-20">
+              <div className="space-y-8 sm:space-y-12 lg:space-y-20">
                 {projects.map((project, index) => {
                   const isLeft = index % 2 === 0;
                   const ProjectIcon = project.icon;
@@ -214,13 +214,13 @@ export default function ProjectSection() {
                         type: "spring",
                         stiffness: 100,
                       }}
-                      className={`relative flex flex-col lg:flex-row items-center gap-8 ${
+                      className={`relative flex flex-col lg:flex-row items-center gap-4 sm:gap-6 md:gap-8 ${
                         isLeft ? "lg:flex-row-reverse" : ""
                       }`}
                     >
                       {/* Project Card */}
                       <motion.div
-                        className={`group relative w-full lg:w-[45%] p-8 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden ${
+                        className={`group relative w-full lg:w-[45%] p-6 sm:p-8 bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden ${
                           isLeft ? "lg:ml-auto" : "lg:mr-auto"
                         }`}
                         whileHover={{ scale: 1.02, y: -5 }}
@@ -244,7 +244,7 @@ export default function ProjectSection() {
                           </div>
 
                           {/* Title */}
-                          <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
+                          <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white group-hover:text-blue-400 transition-colors">
                             {project.title}
                           </h3>
 

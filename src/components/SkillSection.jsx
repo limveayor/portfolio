@@ -57,29 +57,29 @@ export default function SkillSection() {
     <main>
       <section
         id="skills"
-        className="relative min-h-screen w-full py-20 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32 bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden"
+        className="relative min-h-screen w-full py-16 sm:py-20 px-3 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32 bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden"
       >
         {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-72 sm:w-96 h-72 sm:h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
                 Skills & Technologies
               </span>
             </h2>
-            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto px-2">
               Technologies and tools I work with to bring ideas to life
             </p>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {skills.map(({ name, icon, percent, color }, index) => (
               <div
                 key={name}
-                className="group relative p-8 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:border-blue-500/50 overflow-hidden"
+                className="group relative p-6 sm:p-8 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:border-blue-500/50 overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Hover glow effect */}
@@ -89,7 +89,7 @@ export default function SkillSection() {
                   <div className="mb-4 flex justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     {icon}
                   </div>
-                  <p className="text-center text-xl font-semibold mb-4 text-white">{name}</p>
+                  <p className="text-center text-base sm:text-xl font-semibold mb-4 text-white">{name}</p>
                   
                   <div className="space-y-2">
                     <div className="flex justify-between items-center text-sm">

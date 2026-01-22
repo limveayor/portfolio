@@ -90,7 +90,7 @@ export default function HeroSection() {
 
   return (
     <main>
-      <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32 2xl:px-40 py-20 md:py-32 overflow-hidden">
+      <section className="relative w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white px-3 sm:px-6 md:px-12 lg:px-20 xl:px-32 2xl:px-40 py-16 sm:py-20 md:py-32 overflow-hidden">
         {/* Enhanced Animated background elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Large gradient orbs */}
@@ -170,7 +170,7 @@ export default function HeroSection() {
         />
 
         <motion.div
-          className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10"
+          className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center relative z-10 px-2 sm:px-4"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -203,7 +203,7 @@ export default function HeroSection() {
 
             {/* Main Heading */}
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight"
+              className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight"
               variants={itemVariants}
             >
               <motion.span
@@ -243,10 +243,10 @@ export default function HeroSection() {
 
             {/* Typing Animation */}
             <motion.div
-              className="h-14 flex items-center justify-center md:justify-start"
+              className="h-12 sm:h-14 flex items-center justify-center md:justify-start"
               variants={itemVariants}
             >
-              <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-300">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300">
                 I'm a{" "}
                 <span className="text-blue-400 border-r-2 border-blue-400 pr-1 inline-block min-w-[2px] font-bold">
                   {text}
@@ -286,11 +286,11 @@ export default function HeroSection() {
 
             {/* Floating Tech Icons */}
             <motion.div
-              className="relative w-full overflow-hidden h-20 my-8 bg-gradient-to-r from-slate-800/60 to-slate-900/60 backdrop-blur-md rounded-xl p-4 border border-blue-500/30 shadow-xl"
+              className="relative w-full overflow-hidden h-16 sm:h-20 my-6 sm:my-8 bg-gradient-to-r from-slate-800/60 to-slate-900/60 backdrop-blur-md rounded-xl p-3 sm:p-4 border border-blue-500/30 shadow-xl"
               variants={itemVariants}
               whileHover={{ scale: 1.02 }}
             >
-              <div className="absolute flex whitespace-nowrap animate-slide-left gap-10 text-4xl">
+              <div className="absolute flex whitespace-nowrap animate-slide-left gap-6 sm:gap-10 text-3xl sm:text-4xl">
                 {[...Array(2)].flatMap((_, i) => [
                   <FaReact
                     key={`react-${i}`}
@@ -323,13 +323,13 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              className="flex flex-col xs:flex-row gap-3 sm:gap-4 justify-center md:justify-start"
               variants={itemVariants}
             >
               <motion.a
                 href={cvFile}
                 download="CV-Lim-Veayor.pdf"
-                className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold shadow-2xl overflow-hidden"
+                className="group relative px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full font-semibold shadow-2xl overflow-hidden w-full sm:w-auto text-center"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 animate={{
@@ -373,7 +373,7 @@ export default function HeroSection() {
 
               <motion.a
                 href="#contact"
-                className="px-8 py-4 border-2 border-blue-400 text-blue-400 rounded-full font-semibold backdrop-blur-sm bg-blue-400/10 hover:bg-blue-400 hover:text-white transition-all duration-300"
+                className="px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base border-2 border-blue-400 text-blue-400 rounded-full font-semibold backdrop-blur-sm bg-blue-400/10 hover:bg-blue-400 hover:text-white transition-all duration-300 w-full sm:w-auto text-center"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -383,7 +383,7 @@ export default function HeroSection() {
 
             {/* Social Links */}
             <motion.div
-              className="flex justify-center md:justify-start gap-6 pt-4"
+              className="flex justify-center md:justify-start gap-4 sm:gap-6 pt-4 flex-wrap"
               variants={itemVariants}
             >
               {[
@@ -410,7 +410,7 @@ export default function HeroSection() {
                     href={social.href}
                     target={social.href.startsWith("mailto") ? undefined : "_blank"}
                     rel={social.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-                    className="group w-14 h-14 flex items-center justify-center bg-slate-800/50 backdrop-blur-sm rounded-full border border-slate-700 hover:border-blue-500 transition-all"
+                    className="group w-12 sm:w-14 h-12 sm:h-14 flex items-center justify-center bg-slate-800/50 backdrop-blur-sm rounded-full border border-slate-700 hover:border-blue-500 transition-all"
                     aria-label={social.label}
                     whileHover={{ scale: 1.15, rotate: 360 }}
                     whileTap={{ scale: 0.9 }}
@@ -418,7 +418,7 @@ export default function HeroSection() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.8 + idx * 0.1 }}
                   >
-                    <Icon className="text-xl text-gray-300 group-hover:text-blue-400 transition-colors" />
+                    <Icon className="text-lg sm:text-xl text-gray-300 group-hover:text-blue-400 transition-colors" />
                   </motion.a>
                 );
               })}
@@ -469,7 +469,7 @@ export default function HeroSection() {
                 return (
                   <motion.div
                     key={idx}
-                    className={`absolute ${tech.pos} w-16 h-16 flex items-center justify-center bg-slate-800/80 backdrop-blur-sm rounded-full border border-slate-700 shadow-xl`}
+                    className={`hidden lg:flex absolute ${tech.pos} w-16 h-16 items-center justify-center bg-slate-800/80 backdrop-blur-sm rounded-full border border-slate-700 shadow-xl`}
                     animate={{
                       y: [0, -10, 0],
                       rotate: [0, 5, 0],
@@ -502,7 +502,7 @@ export default function HeroSection() {
                   <motion.img
                     src={myImage}
                     alt="Portrait of Lim Veayor"
-                    className="rounded-full w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 object-cover shadow-2xl"
+                    className="rounded-full w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 object-cover shadow-2xl"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.3 }}
                   />
