@@ -22,19 +22,20 @@ module.exports = {
           "0%": { opacity: "0", transform: "scale(0.8)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "slide-left": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "shimmer": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
       },
       animation: {
         "fade-in-up": "fade-in-up 1s ease-out forwards",
         "zoom-in": "zoom-in 1s ease-out forwards",
-      },
-            keyframes: {
-        'slide-left': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-      },
-      animation: {
-        'slide-left': 'slide-left 20s linear infinite',
+        "slide-left": "slide-left 20s linear infinite",
+        "shimmer": "shimmer 2s infinite",
       },
     },
   },

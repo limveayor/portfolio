@@ -8,7 +8,7 @@ import SkillSection from "../components/SkillSection";
 import ProjectSection from "../components/ProjectSection";
 import ContactSection from "../components/ContactSection";
 
-function App() {
+function HomePage() {
   useEffect(() => {
     AOS.init({
       duration: 1000,   // animation duration
@@ -38,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;

@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: '/portfolio/', 
+export default defineConfig(({ mode }) => ({
+  base: mode === 'production' ? '/portfolio/' : '/', 
   plugins: [react()],
-  assetsInclude: ['**/*.JPG'],
-})
+  assetsInclude: ['**/*.JPG', '**/*.pdf'],
+}))

@@ -57,28 +57,58 @@ export default function SkillSection() {
     <main>
       <section
         id="skills"
-        className="min-h-screen w-full py-16 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32 bg-slate-900"
+        className="relative min-h-screen w-full py-20 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-32 bg-gradient-to-b from-slate-900 to-slate-800 overflow-hidden"
       >
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-12 text-blue-400">
-          Skills
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {skills.map(({ name, icon, percent, color }) => (
-            <div
-              key={name}
-              className="p-6 border border-blue-500 rounded-xl shadow-md text-white font-medium bg-slate-800 hover:bg-blue-600 hover:shadow-lg transition-all transform hover:scale-105"
-            >
-              <div className="mb-3 flex justify-center">{icon}</div>
-              <p className="text-center text-lg mb-2">{name}</p>
-              <div className="w-full bg-gray-700 rounded-full h-2.5">
-                <div
-                  className={`${color} h-2.5 rounded-full`}
-                  style={{ width: `${percent}%` }}
-                ></div>
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">
+                Skills & Technologies
+              </span>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Technologies and tools I work with to bring ideas to life
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skills.map(({ name, icon, percent, color }, index) => (
+              <div
+                key={name}
+                className="group relative p-8 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:border-blue-500/50 overflow-hidden"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                {/* Hover glow effect */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${color.replace('bg-', 'from-')} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                
+                <div className="relative z-10">
+                  <div className="mb-4 flex justify-center transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    {icon}
+                  </div>
+                  <p className="text-center text-xl font-semibold mb-4 text-white">{name}</p>
+                  
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center text-sm">
+                      <span className="text-gray-400">Proficiency</span>
+                      <span className={`font-bold ${color.replace('bg-', 'text-')}`}>{percent}%</span>
+                    </div>
+                    <div className="w-full bg-slate-700 rounded-full h-3 overflow-hidden">
+                      <div
+                        className={`${color} h-3 rounded-full transition-all duration-1000 ease-out shadow-lg`}
+                        style={{ width: `${percent}%` }}
+                      >
+                        <div className="h-full w-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p className="text-sm mt-1 text-right">{percent}%</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
     </main>
